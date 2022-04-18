@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
-	pkg_types "github.com/4nt0nn/cn_go_patterns/pkg"
+	pkg_stp_types "github.com/4nt0nn/cn_go_patterns/pkg/stability_patterns"
 )
 
-func Throttle(effector pkg_types.Effector, max uint, refill uint, d time.Duration) pkg_types.Effector {
+func Throttle(effector pkg_stp_types.Effector, max uint, refill uint, d time.Duration) pkg_stp_types.Effector {
 	var tokens = max
 	var once sync.Once
 

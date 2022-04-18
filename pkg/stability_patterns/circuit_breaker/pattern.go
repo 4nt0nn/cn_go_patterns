@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
-	pkg_types "github.com/4nt0nn/cn_go_patterns/pkg"
+	pkg_stp_types "github.com/4nt0nn/cn_go_patterns/pkg/stability_patterns"
 )
 
-func Breaker(circuit pkg_types.Circuit, failureThreshold uint) pkg_types.Circuit {
+func Breaker(circuit pkg_stp_types.Circuit, failureThreshold uint) pkg_stp_types.Circuit {
 	var consecutiveFailures int = 0
 	var lastAttempt = time.Now()
 	var m sync.RWMutex

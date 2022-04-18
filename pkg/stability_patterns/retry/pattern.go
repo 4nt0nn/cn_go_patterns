@@ -5,10 +5,10 @@ import (
 	"log"
 	"time"
 
-	pkg_types "github.com/4nt0nn/cn_go_patterns/pkg"
+	pkg_stp_types "github.com/4nt0nn/cn_go_patterns/pkg/stability_patterns"
 )
 
-func Retry(effector pkg_types.Effector, retires int, delay time.Duration) pkg_types.Effector {
+func Retry(effector pkg_stp_types.Effector, retires int, delay time.Duration) pkg_stp_types.Effector {
 	return func(ctx context.Context) (string, error) {
 		for r := 0; ; r++ { // condition omitted
 			response, err := effector(ctx)

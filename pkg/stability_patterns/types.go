@@ -1,4 +1,4 @@
-package pkg_types
+package pkg_stp_types
 
 import "context"
 

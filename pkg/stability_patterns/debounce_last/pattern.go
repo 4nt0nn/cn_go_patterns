@@ -5,10 +5,10 @@ import (
 	"sync"
 	"time"
 
-	pkg_types "github.com/4nt0nn/cn_go_patterns/pkg"
+	pkg_stp_types "github.com/4nt0nn/cn_go_patterns/pkg/stability_patterns"
 )
 
-func DebounceLast(circuit pkg_types.Circuit, d time.Duration) pkg_types.Circuit {
+func DebounceLast(circuit pkg_stp_types.Circuit, d time.Duration) pkg_stp_types.Circuit {
 	var threshold time.Time = time.Now()
 	var ticker *time.Ticker
 	var result string
